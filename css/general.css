@@ -3,7 +3,7 @@ body
 {
    font-family: arial, sans-serif;
    font-size: 80%;
-   background: #6BACCF url("img/options_bg.png") repeat-x top left;
+   background: #6BACCF url("../img/options_bg.png") repeat-x top left;
    color: #fff;
 }
 
@@ -180,7 +180,7 @@ ul.menu li a
    clear: both;
    padding: 10px;
    border: 0;
-   background: white url("img/options_bg.png") repeat-x top left;
+   background: white url("../img/options_bg.png") repeat-x top left;
    color: #000;
    font-size: 150%;
    font-weight: bold;
