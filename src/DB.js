@@ -58,7 +58,7 @@ wrappedDB.putObject = function(storeId, key, value) {
       return;
 
    var db = wrappedDB.db;
-   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE, 0);
+   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE);
    
    trans.onabort = function(e) {
       console.error(e);
@@ -88,7 +88,7 @@ wrappedDB.deleteSetting = function(storeId, key) {
       return;
 
    var db = wrappedDB.db;
-   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE, 0);
+   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE);
    var store = trans.objectStore(storeId);
  
    var request = store.delete(key);
@@ -108,7 +108,7 @@ wrappedDB.readAllObjects = function(storeId, objectFoundCallback, requestComplet
       return;
 
    var db = wrappedDB.db;
-   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE, 0);
+   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE);
    var store = trans.objectStore(storeId);
  
    // Get everything in the store;
@@ -137,7 +137,7 @@ wrappedDB.readObject = function(storeId, key, callback) {
       return;
 
    var db = wrappedDB.db;
-   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE, 0);
+   var trans = db.transaction([storeId], IDBTransaction.READ_WRITE);
    var store = trans.objectStore(storeId);
  
    // Get everything in the store;
