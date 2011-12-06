@@ -21,6 +21,6 @@
    },
    "name": "Mail Checker Minus (Beta)",
    "options_page": "options.html",
-   "permissions": [ "notifications", "tabs", "http://*/*", "https://*/*", "http://*.google.com/*", "https://*.google.com/*" ],
+   "permissions": [ "bookmarks", "notifications", "tabs", "http://*/*", "https://*/*", "http://*.google.com/*", "https://*.google.com/*" ],
    "version": "1.2.4.9"
 }
