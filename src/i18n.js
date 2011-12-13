@@ -695,11 +695,13 @@ languages["es"] = {
     "fullLinkTitle" : "Mostrar mensaje completo",
     "refreshLinkTitle" : "Consultar nuevos correos",
     "optionsLinkTitle" : "Ir a la página de opciones",
+    "sendPageLinkTitle" : "Enviar link a pagina",
     "composeLinkTitle" : "Redactar nuevo correo",
     "noUnreadText" : "No tienes correos sin leer",
     "oneUnreadText" : "correo sin leer", // One unread item: "1 unread mail"
     "severalUnreadText" : "correos sin leer", // Several unread items: "3 unread mail"
-    "popupText" : "Has recibido un nuevo correo!"
+    "popupText" : "Has recibido un nuevo correo!",
+    "showLabelsTitle" : "Mostrar etiquetas"
 };
 
 // Swedish
