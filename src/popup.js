@@ -179,10 +179,6 @@ function sendReply(mailid) {
 
 function getThread(accountId, mailid) {
 
-   if (Settings.read("showfull_read")) {
-	  readThread(accountId, mailid, true);
-   }
-
    if (mailCache[mailid] != null) {
       // Mail already fetched, read from cache instead
       showBody(accountId, mailid, mailCache[mailid]);
@@ -201,6 +197,10 @@ function showBody(accountid, mailid, mailbody) {
    //   hideElement(mailid + "_more-link");
 
    if (mailbody != null) {
+
+      if (Settings.read("showfull_read")) {
+         readThread(accountid, mailid, true);
+      }
 
       var previousMail = null;
       var nextMail = null;
