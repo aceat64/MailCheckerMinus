@@ -396,9 +396,13 @@ function replyTextKeyPress(event, mailid) {
 }
 
 function refreshMail() {   
+   inboxCount = 0;
    $.each(mailAccounts, function (i, account) {
       account.refreshInbox(function () {
          renderAccount(account);         
+         inboxCount++;
+         if (inboxCount == mailAccounts.length)
+            bindLinkHandlers();
       });
    });
 }
@@ -450,7 +454,10 @@ function renderMail() {
       renderAccount(account);
    });
 
-   // Add event handlers
+   bindLinkHandlers();
+}
+
+function bindLinkHandlers() {
    $(".inboxLink").click(function () { openInbox($(this).attr('accountId')); });
    $(".composeLink").click(function () { composeNew($(this).attr('accountId')); });
    $(".sendpageLink").click(function () { sendPage($(this).attr('accountId')); });
