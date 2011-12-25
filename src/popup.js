@@ -399,10 +399,13 @@ function refreshMail() {
    inboxCount = 0;
    $.each(mailAccounts, function (i, account) {
       account.refreshInbox(function () {
-         renderAccount(account);         
          inboxCount++;
-         if (inboxCount == mailAccounts.length)
+         if (inboxCount == mailAccounts.length) {
+            $.each(mailAccounts, function(i, account) {
+                renderAccount(account);         
+            });
             bindLinkHandlers();
+         }
       });
    });
 }
