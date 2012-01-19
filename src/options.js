@@ -11,6 +11,7 @@ $(restore_options);
 
 var boolIdArray = new Array("hide_count",
                             "showfull_read",
+							"hide_clicked",
                             "check_gmail_off",
                             "open_tabs",
                             "archive_read",

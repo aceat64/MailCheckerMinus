@@ -21,6 +21,7 @@ var Settings = function() {
       "sound_off": false,
       "show_notification": true,
       "showfull_read": false,
+	  "hide_clicked": false,
       "animate_off": false,
       "open_tabs": false,
       "no_mailto": false,
