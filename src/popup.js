@@ -263,8 +263,16 @@ function showBody(accountid, mailid, mailbody) {
       fullscreenContainer.append(fullscreenControl);
       fullscreenContainer.append(fullscreenContent);
 
+	  if(Settings.read("hide_clicked")){
+		for(var i=0;i<fullscreenContent[0].getElementsByTagName("a").length;i++){
+			var curLink = fullscreenContent[0].getElementsByTagName("a")[i];
+			curLink.onclick = function(a,m){return function(){
+				readThread(a, m, false);
+			}}(accountid, mailid);	
+		}
+	  }
+		  
       // Set event handlers
-
       if(previousMail) {
          fullscreenControl.find('.previousLink').css('visibility','visible');
          fullscreenControl.find('.previousLink').click(function () {
@@ -323,6 +331,8 @@ function showBody(accountid, mailid, mailbody) {
 
       // Display full screen container
       fullscreenContainer.css("display", "block");
+	  
+	  
 
       // Save this mail in the cache
       mailCache[mailid] = mailbody;
